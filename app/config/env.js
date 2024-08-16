@@ -4,7 +4,7 @@ const env = {
   database: 'umg_ejercicio1',
   username: 'umg_ejercicio_user',
   password: 'Il0dFPqljh555fVSXnUg1lbWeJeHKlIm',
-  host: 'dpg-cqgr7qlds78s73aqfau0-a.oregon-postgres.render.com',
+  host: 'dpg-cqgr7qlds78s73aqfau0-a',
   dialect: 'postgres',
   pool: {
     max: 5,
