@@ -1,40 +1,36 @@
 module.exports = (sequelize, Sequelize) => {
-	const Libro = sequelize.define('libro', {	
-	  id: {
+	const Catedraticos = sequelize.define('catedraticos', {	
+	  idcatedratico: {
 			type: Sequelize.INTEGER,
 			autoIncrement: true,
 			primaryKey: true
     },
-	  nombre: {
+	  name: {
 			type: Sequelize.STRING
 	  },
-	  editorial: {
-			type: Sequelize.STRING
+	  fechacontratacion: {
+			type: Sequelize.DATE,
+			allowNull: false
   	},
-	  autor: {
-			type: Sequelize.STRING
+	  fechanac: {
+			type: Sequelize.DATE,
+			allowNull: false
 	  },
 	  genero: {
 			type: Sequelize.STRING
     },
-    pais: {
+    titulo: {
         type: Sequelize.STRING
     },
-    paginas: {
-        type: Sequelize.INTEGER
-    },
-    anio: {
-        type: Sequelize.DATE
-    },
-    precio: {
+    salario: {
         type: Sequelize.FLOAT
     },
-
+    
     copyrightby: {
       type: Sequelize.STRING,
       defaultValue: 'UMG Antigua'
     }
 	});
 	
-	return Libro;
+	return Catedraticos;
 } 

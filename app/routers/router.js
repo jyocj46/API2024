@@ -9,6 +9,9 @@ const cliente = require('../controllers/cliente.controller.js')
 const cancion = require('../controllers/cancion.controller.js')
 const libro = require('../controllers/libro.controller.js')
 const prestamoLibro = require('../controllers/prestamos.controller.js')
+const catedraticos = require('../controllers/catedraticos.controller.js')
+const horarios = require('../controllers/horarios.controller.js')
+const ingreso = require('../controllers/ingreso.controller.js')
 
 router.post('/api/customers/create', customers.create);
 router.get('/api/customers/all', customers.retrieveAllCustomers);
@@ -73,5 +76,26 @@ router.get('/api/prestamoLibro/all', prestamoLibro.retrieveAllPrestamoLibro);
 router.get('/api/prestamoLibro/onebyid/:id', prestamoLibro.getPrestamoLibroById);
 router.put('/api/prestamoLibro/update/:id', prestamoLibro.updateById);
 router.delete('/api/prestamoLibro/delete/:id', prestamoLibro.deleteById);
+
+// CRUD catedraticos
+router.post('/api/catedraticos/create', catedraticos.create);
+router.get('/api/catedraticos/all', catedraticos.retrieveAllCatedraticos);
+router.get('/api/catedraticos/onebyid/:id', catedraticos.getCatedraticosById);
+router.put('/api/catedraticos/update/:id', catedraticos.updateById);
+router.delete('/api/catedraticos/delete/:id', catedraticos.deleteById);
+
+// CRUD horarios
+router.post('/api/horarios/create', horarios.create);
+router.get('/api/horarios/all', horarios.retrieveAllHorarios);
+router.get('/api/horarios/onebyid/:id', horarios.getHorariosById);
+router.put('/api/horarios/update/:id', horarios.updateById);
+router.delete('/api/horarios/delete/:id', horarios.deleteById);
+
+// CRUD ingreso
+router.post('/api/ingreso/create', ingreso.create);
+router.get('/api/ingreso/all', ingreso.retrieveAllIngresos);
+router.get('/api/ingreso/onebyid/:id', ingreso.getIngresoById);
+router.put('/api/ingreso/update/:id', ingreso.updateById);
+router.delete('/api/ingreso/delete/:id', ingreso.deleteById);
 
 module.exports = router;

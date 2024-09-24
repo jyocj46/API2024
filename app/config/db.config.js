@@ -26,13 +26,18 @@ const db = {};
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
- 
+
+
+
+
 db.Customer = require('../models/customer.model.js')(sequelize, Sequelize);
 db.Employee = require('../models/employee.model.js')(sequelize, Sequelize); 
 db.Product = require('../models/product.model.js')(sequelize, Sequelize);
 db.Categorie = require('../models/categorie.models.js')(sequelize, Sequelize);
 db.Cliente = require('../models/cliente.models.js')(sequelize, Sequelize);
-
+db.Catedraticos = require('../models/catedraticos.models.js')(sequelize, Sequelize);
+db.Horarios = require('../models/horarios.models.js')(sequelize, Sequelize);
+db.Ingreso = require('../models/ingreso.models.js')(sequelize, Sequelize);
 db.Cancion = require('../models/cancion.models.js')(sequelize, Sequelize);
 db.Libro = require('../models/libro.models.js')(sequelize, Sequelize);
 db.Prestamos = require('../models/prestamos.models.js')(sequelize, Sequelize);

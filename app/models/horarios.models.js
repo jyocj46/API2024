@@ -1,27 +1,28 @@
 module.exports = (sequelize, Sequelize) => {
-	const Cliente = sequelize.define('cliente', {	
-	  id: {
+	const Horarios = sequelize.define('horario', {	
+	  idhorario: {
 			type: Sequelize.INTEGER,
 			autoIncrement: true,
 			primaryKey: true
     },
-	  firstname: {
-			type: Sequelize.STRING
+        idcatedratico: {
+			type: Sequelize.INTEGER
 	  },
-	  lastname: {
+	  curso: {
 			type: Sequelize.STRING
   	},
-	  address: {
-			type: Sequelize.STRING
+	  horainicio: {
+			type: Sequelize.TIME
 	  },
-	  age: {
-			type: Sequelize.INTEGER
+	  horafin: {
+			type: Sequelize.TIME
     },
+    
     copyrightby: {
       type: Sequelize.STRING,
       defaultValue: 'UMG Antigua'
     }
 	});
 	
-	return Cliente;
+	return Horarios;
 } 
